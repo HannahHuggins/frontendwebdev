@@ -141,13 +141,15 @@ Variable names need to be descriptive so you know what they're used for
 
 
 //---------------------------------------------------------------------------------------------------------------------------------//
+// Practice Basic Variables, Input & Output in JavaScript vid
+
+// var firstName = prompt("what's your first name?");
+// var lastName = prompt("what's your last name?");
+// var fullName = firstName + lastName;
+// alert(fullName + fullName.length);
 
 
-
-
-
-
-
+//---------------------------------------------------------------------------------------------------------------------------------//
 
 
 
