@@ -105,7 +105,17 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   // Override the current require with this new one
   return newRequire;
 })({"scripts-three.js":[function(require,module,exports) {
+// Introducing conditional statements vid
+// if else statement
+var answer = prompt("What programming language is the name of a gem");
 
+if (answer.toUpperCase === 'RUBY') {
+  document.write("Correct!");
+} else {
+  document.write("You're wrong.");
+} // if the condition is correct then the code runs 
+//---------------------------------------------------------------------------------------------------------------------------------//
+// Comparison operators vid
 },{}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -276,3 +286,4 @@ function hmrAccept(bundle, id) {
   });
 }
 },{}]},{},["../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","scripts-three.js"], null)
+//# sourceMappingURL=/scripts-three.43e9ce46.map
