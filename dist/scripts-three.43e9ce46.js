@@ -200,18 +200,69 @@ Multi-line  - it's common to add a multi-line comment at the start of a program 
 //---------------------------------------------------------------------------------------------------------------------------------//
 //Combining multiple tests into a single condition vid 
 // &&, 2 conditions are evalutated separately but work together to create one boolean
-var age = 25;
+// var age = 25;
+// if (20 < age && age < 30){
+//     console.log(age)
+// }
+// and operator
+// var agree = prompt("do you agree?");
+// if (agree === 'yes' || agree === 'ys' || agree === 'y'){
+//     console.log("yes!")
+// }
+//  || or operator = whole thing is true if one condition is true
+//---------------------------------------------------------------------------------------------------------------------------------//
+// the conditional challenge. 
+// ask 5 questions
+// keep track of which ones they got correct
+// message after the quiz letting them know what they got right
+// if the player answered them all correctly 
+var questionsCorrect = 0;
+var questionOne = prompt("Question 1.) What is 1 + 1?");
 
-if (20 < age && age < 30) {
-  console.log(age);
-} // and operator
+if (questionOne == 2 || questionOne == 'two') {
+  alert("Correct!");
+  questionsCorrect = questionsCorrect + 1;
+} else {
+  alert("Incorrect!");
+}
 
+var questionTwo = prompt("Question 2.) What is 4/2?");
 
-var agree = prompt("do you agree?");
+if (questionTwo == 2 || questionTwo == 'two') {
+  alert("Correct!");
+  questionsCorrect = questionsCorrect + 1;
+} else {
+  alert("Incorrect!");
+}
 
-if (agree === 'yes' || agree === 'ys' || agree === 'y') {
-  console.log("yes!");
-} //  || or operator = whole thing is true if one condition is true
+var questionThree = prompt("Question 3.) What is 5 * 5?");
+
+if (questionThree == 25 || questionThree == 'twentyfive') {
+  alert("Correct!");
+  questionsCorrect = questionsCorrect + 1;
+} else {
+  alert("Incorrect!");
+}
+
+var questionFour = prompt("Question 4.) What is 10 * 10?");
+
+if (questionFour == 100 || questionFour == 'onehundred') {
+  alert("Correct!");
+  questionsCorrect = questionsCorrect + 1;
+} else {
+  alert("Incorrect!");
+}
+
+var questionFive = prompt("Question 5.) What is 50/2?");
+
+if (questionFive == 25 || questionFive == 'twentyfive') {
+  alert("Correct!");
+  questionsCorrect = questionsCorrect + 1;
+} else {
+  alert("Incorrect!");
+}
+
+alert("Well done! You got " + questionsCorrect + "/5 correct!");
 },{}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -239,7 +290,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63226" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64432" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
