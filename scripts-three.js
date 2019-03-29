@@ -152,46 +152,90 @@ Multi-line  - it's common to add a multi-line comment at the start of a program 
 // message after the quiz letting them know what they got right
 // if the player answered them all correctly 
 
-var questionsCorrect = 0;
+// var questionsCorrect = 0;
 
-var questionOne = prompt("Question 1.) What is 1 + 1?");
-if (questionOne == 2 || questionOne == 'two'){
-    alert("Correct!");
-    questionsCorrect = questionsCorrect + 1
-} else {
-    alert("Incorrect!")
-}
+// var questionOne = prompt("Question 1.) What is 1 + 1?");
+// if (questionOne == 2 || questionOne == 'two'){
+//     alert("Correct!");
+//     questionsCorrect = questionsCorrect + 1
+// } else {
+//     alert("Incorrect!")
+// }
 
-var questionTwo = prompt("Question 2.) What is 4/2?");
-if (questionTwo == 2 || questionTwo == 'two'){
-    alert("Correct!");
-    questionsCorrect = questionsCorrect + 1
-} else {
-    alert("Incorrect!")
-}
+// var questionTwo = prompt("Question 2.) What is 4/2?");
+// if (questionTwo == 2 || questionTwo == 'two'){
+//     alert("Correct!");
+//     questionsCorrect = questionsCorrect + 1
+// } else {
+//     alert("Incorrect!")
+// }
 
-var questionThree = prompt("Question 3.) What is 5 * 5?");
-if (questionThree == 25 || questionThree == 'twentyfive'){
-    alert("Correct!");
-    questionsCorrect = questionsCorrect + 1
-} else {
-    alert("Incorrect!")
-}
+// var questionThree = prompt("Question 3.) What is 5 * 5?");
+// if (questionThree == 25 || questionThree == 'twentyfive'){
+//     alert("Correct!");
+//     questionsCorrect = questionsCorrect + 1
+// } else {
+//     alert("Incorrect!")
+// }
 
-var questionFour = prompt("Question 4.) What is 10 * 10?")
-if (questionFour == 100 || questionFour == 'onehundred'){
-    alert("Correct!");
-    questionsCorrect = questionsCorrect + 1
-} else {
-    alert("Incorrect!")
-}
+// var questionFour = prompt("Question 4.) What is 10 * 10?")
+// if (questionFour == 100 || questionFour == 'onehundred'){
+//     alert("Correct!");
+//     questionsCorrect = questionsCorrect + 1
+// } else {
+//     alert("Incorrect!")
+// }
 
-var questionFive = prompt("Question 5.) What is 50/2?")
-if (questionFive == 25 || questionFive == 'twentyfive'){
-    alert("Correct!");
-    questionsCorrect = questionsCorrect + 1
-} else {
-    alert("Incorrect!")
-}
+// var questionFive = prompt("Question 5.) What is 50/2?")
+// if (questionFive == 25 || questionFive == 'twentyfive'){
+//     alert("Correct!");
+//     questionsCorrect = questionsCorrect + 1
+// } else {
+//     alert("Incorrect!")
+// }
 
-alert("Well done! You got " + questionsCorrect + "/5 correct!");
+// alert("Well done! You got " + questionsCorrect + "/5 correct!");
+
+
+//---------------------------------------------------------------------------------------------------------------------------------//
+// practice if and else if statements in javascript practice vid 
+
+// 2 numbers as input and calculates the results
+// division by 0 is not allowed, by you can divide by 0 
+// also writing words, or not entering an input 
+
+// var numberOne = parseInt(prompt("Please enter your first number"));
+// var numberTwo = parseInt(prompt("Please enter your second number"));
+// var addition = parseInt(numberOne) + parseInt(numberTwo);
+// var subtraction = numberOne - numberTwo;
+// var division = numberOne / numberTwo;
+// var multiplication = numberOne * numberTwo;
+
+// if (numberOne == 0){
+//     document.write("please try again.")
+// }else{
+//     document.write(numberOne + "+" + numberTwo + "=" + addition)
+// }
+// if (isNan(numberTwo)){
+//     document.write("woops")
+// }
+
+// var num1;
+// var num2;
+// var message;
+
+// alert("lets do some math");
+
+// num1 = prompt("please type a number");
+// num1 = parseFloat(num1);
+// num2 = prompt("please type a number");
+// num2 = parseFloat(num2);
+
+// if (num2 === 0){
+//     alert("the second number is 0, you can't divide by 0.")
+// } else if (isNaN(num1) || isNaN(num2)){
+//     alert("you haven't typed a number")
+// } else {
+//     document.write("Math with the numbers " + num1 + "+" + num2);
+// }
+
