@@ -164,3 +164,61 @@ you can pass multiple arguements
 
 // random number challenge vid
 
+// function randomNumberGenerator(numberOne){
+//     var randomNumber = Math.floor(Math.random()*numberOne)+1;
+//     return randomNumber;
+// }
+
+// console.log(randomNumberGenerator(100));
+
+// random number challenge sol vid 
+//---------------------------------------------------------------------------------------------------------------------------------//
+
+// random number challenge, part 2 vid
+
+
+// function randomNumberGenerator(numberOne){
+//     var randomNumber= Math.floor(Math.random()*numberOne) + 1;
+//     if (isNaN(numberOne)){
+//         throw new Error('error message');
+//     } else {
+//     return randomNumber;
+// }
+// }
+
+// alert(randomNumberGenerator(86));
+
+// isNaN(9)  // false
+// isNaN('nine')//true 
+
+//---------------------------------------------------------------------------------------------------------------------------------//
+
+//Introducing the practice vid
+
+function areaOfARectangle(width, height){
+    var area = width * height;
+    return "The area of the rectangle is " + area; 
+}
+
+alert(areaOfARectangle(5,22))
+
+function volumeOfAPrism(width, height, length){
+    var volume = width * height * length; 
+    return "The volume of the prism is " + volume;
+}
+
+alert(volumeOfAPrism(4.5,12.5,17.4));
+
+function areaOfACircle(radius){
+    var area = 3.16 * (radius * radius);
+    return "The area of the circle is " + area;
+}
+
+alert(areaOfACircle(7.2));
+
+function volumeOfASphere(radius){
+    var volume = (radius * radius * radius) * 3.16 * 4 / 3;
+    return "The volume of the sphere is " + volume;
+}
+
+alert(volumeOfASphere(7.2));
