@@ -104,169 +104,132 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   // Override the current require with this new one
   return newRequire;
-})({"scripts-four.js":[function(require,module,exports) {
-//Introducing functions vid 
-//start by declaring the function (providing instructions)
-//then place a set of parenthesis, this is how functions are identified
-//then braces, forming the code block 
-//js inside the braces is run whenever the function is activated
-//to activate, you 'call' the function 
-// function goToCoffeeShop(){
+})({"js-loops-arrays-obects/scripts.js":[function(require,module,exports) {
+// Introducing loops, arrays and objects vid
+//What are loops vid
+// function randomNumber(upper){
+//     return Math.floor(Math.random()* upper) +1;
 // }
-// goToCoffeeShop(); //calling the function 
-// function alertRandom(){
-//     var randomNumber = Math.floor(Math.random()*6)+1;
-//     alert(randomNumber);
+// var counter = 0;
+// while (counter < 10000) {  //test condition 
+//     var randNum = randomNumber(6);
+//     document.write(randNum + ' ');
+//     counter += 1;
 // }
-// alertRandom();
-// // function expression - assign a function to a variable
-// var alertRandom = function() {
-//     var randonNumber= math.foor(Math.random()*6)+1;
-//     alert(randomNumber);
-// };
-//---------------------------------------------------------------------------------------------------------------------------------//
-//Functions change the flow of your program vid 
-
-/*
-good idea to put the functions at the top of the script. 
-*/
-//---------------------------------------------------------------------------------------------------------------------------------//
-// Getting information from a function vid
-// function goToCoffeeShop(){
-//     return "Espresso is on its way.";
+//----------------------------------------------------------------------------------------------
+// A closer look at loop conditions 
+// var counter = 0;
+// while (counter < 100){
+//     console.log(counter);
+//     counter +=1;
 // }
-// alert(goToCoffeeShop());
-// the function is returning a String value 
-// function getRandomNumber(){
-//     var randomNumber = Math.floor(Math.random()*6)+1;
-//     return randomNumber;
+// var upper = 10000;
+// var randomNumber = getRandomNumber(upper);
+// var guess;
+// var attempts = 0;
+// function getRandomNumber(upper){
+//     return Math.floor(Math.random() * upper) + 1;
 // }
-// alert(getRandomNumber());
-// console.log(getRandomNumber);
-// creating a function that returns a value so it can be used in other way or for more calculations. 
-// function isMailEmpty(){
-//     var field = document.getElementById('email'); 
-//     if (field.value === ''){    //conditional statement is checking the condition
-//         return true;
-//     } else {
-//         return false;
+// while (guess !== randomNumber){
+//     guess = getRandomNumber(upper);
+//     attempts += 1;
+//     console.log("The random number is " + randomNumber + ", and the guess was " + guess);
+//     if (guess == randomNumber){
+//         alert("It took " + attempts + " attempts for the computer to guess the number!");
 //     }
 // }
-// var fieldTest = isMailEmpty();
-// if (fieldTest === true){
-//     alert('please provide your email address.');
-// }
-//the return statement should be the last thing in a function 
-// function noAlert(){
-//     return 5;
-//     alert("what");
-// }
-// noAlert();
-// alert("this will appear!");
-//---------------------------------------------------------------------------------------------------------------------------------//
-// Giving information to functions vid 
-// function goToCoffeeShop(drink){
-//     alert(drink + ' is on its way');
-// }
-// goToCoffeeShop('hot chocolate');
-//parameter is expecting info, so we need to pass it info 
+// if the test condition is true at the beginning the loop won't run 
+// break condition allows you to exit the loop 
+//----------------------------------------------------------------------------------------------
+// do while loops 
+// do {
+// } while ()
+// do it over and over again as long as the condition is true 
+// difference between this and while loop - always executes the code block at least once, because the condition is tested after the loop
+// while loop: condition tested at beginning
+// do while: condition tested at the end 
+// var randomNumber = getRandomNumber(10);
+// var guess;
+// var guessCount = 0;
+// var correctGuess = false; 
 // function getRandomNumber(upper){
-//     var randomNumber = Math.floor(Math.random()* upper)+1;
-//     return randomNumber;
+//     var num = Math.floor(Math.random()* upper) + 1;
+//     return num;
 // }
-// console.log(getRandomNumber(100));
-// console.log(getRandomNumber(10));
-
-/*passing an arguement to the function to control how it works. 
-the function stores the value within the parameter and uses that value 
-you can pass multiple arguements
-*/
-// function goToCoffeeShop(drink, pastry){
-//     alert(drink +  'and' + pastry + ' is on its way');
+// do {
+//     guess= prompt("i'm thinking of a number between 1 and 10");
+//     guessCount += 1;
+//     if (parseInt(guess) === randomNumber) {
+//     correctGuess = true;
 // }
-// goToCoffeeShop('hot chocolate', 'cheese pastry');
-// function getRandomNumber(upper){
-//     var randomNumber = Math.floor(Math.randon()* upper)+1;
-//     return randomNumber;
+// } while (! correctGuess)  // not operator 
+//     alert("you got it!");
+//----------------------------------------------------------------------------------------------
+// For loops 
+// used for actions that need to run a particular number of times
+// commonly used with arrays 
+// var counter = 0;
+// while (counter < 10){
+//     document.write(counter);
+//     counter += 1;
 // }
-// function areaOfARectangle(width, length, unit){
-//     var area = width * length;
-//     return area + ' ' + unit;
+// // This is the same as 
+// for (var counter = 0; counter < 10; counter +=1){
+//     document.write(counter);
 // }
-// console.log(areaOfARectangle(10,4, 'sq ft'));
-// try not to pass more than 4/5 arguements to a function, as this can make it complicated to use 
-//---------------------------------------------------------------------------------------------------------------------------------//
-// function compareNumbers(oneNumber, twoNumber){
-//     if (oneNumber < twoNumber){
-//         return oneNumber;
-//     }else{
-//         return twoNumber;
-//     }
+// declare the variable, condition, result 
+// for (var i = 11; i < 500; i += 2){
+//     console.log(i);
 // }
-// alert(compareNumbers(3,2))
-//---------------------------------------------------------------------------------------------------------------------------------//
-// variable scope vid
-// function greeting(){
-//     var person = 'Lilah';
-//     alert(person);
+// fast way to write loops 
+// var html = ''; 
+// for (var i = 1; i <= 10; i += 1){
+//     html += i + i;
 // }
-// var person = 'george';
-// greeting();
-// alert(person);
-// greeting();
-//each variable lives in a different scope 
-//global scope is outside of the function - all functions can access the global scope
-//always use the var keyword when creating a variable inside a function
-//---------------------------------------------------------------------------------------------------------------------------------//
-// random number challenge vid
-// function randomNumberGenerator(numberOne){
-//     var randomNumber = Math.floor(Math.random()*numberOne)+1;
-//     return randomNumber;
+// console.log(html);
+//----------------------------------------------------------------------------------------------
+// Exiting loops - break statement 
+// var randomNumber = getRandomNumber(10);
+// var guess;
+// var guessCount = 0;
+// var correctGuess = false;
+// function getRandomNumber( upper ) {
+//   var num = Math.floor(Math.random() * upper) + 1; 
+//   return num;
 // }
-// console.log(randomNumberGenerator(100));
-// random number challenge sol vid 
-//---------------------------------------------------------------------------------------------------------------------------------//
-// random number challenge, part 2 vid
-// function randomNumberGenerator(numberOne){
-//     var randomNumber= Math.floor(Math.random()*numberOne) + 1;
-//     if (isNaN(numberOne)){
-//         throw new Error('error message');
-//     } else {
-//     return randomNumber;
+// while(guessCount < 10){
+//   guess = prompt('I am thinking of a number between 1 and 10. What is it?');
+//   guessCount += 1;
+//   if (parseInt(guess) === randomNumber) {
+//     correctGuess = true;
+//     break; // stops an infinite loop 
+//   }  
 // }
+// if (correctGuess){ 
+// document.write('<h1>You guessed the number!</h1>');
+// document.write('It took you ' + guessCount + ' tries to guess the number ' + randomNumber);
+// } else {
+//     document.write("you suck");
 // }
-// alert(randomNumberGenerator(86));
-// isNaN(9)  // false
-// isNaN('nine')//true 
-//---------------------------------------------------------------------------------------------------------------------------------//
-//Introducing the practice vid
-function areaOfARectangle(width, height) {
-  var area = width * height;
-  return "The area of the rectangle is " + area;
-}
-
-alert(areaOfARectangle(5, 22));
-
-function volumeOfAPrism(width, height, length) {
-  var volume = width * height * length;
-  return "The volume of the prism is " + volume;
-}
-
-alert(volumeOfAPrism(4.5, 12.5, 17.4));
-
-function areaOfACircle(radius) {
-  var area = 3.16 * (radius * radius);
-  return "The area of the circle is " + area;
-}
-
-alert(areaOfACircle(7.2));
-
-function volumeOfASphere(radius) {
-  var volume = radius * radius * radius * 3.16 * 4 / 3;
-  return "The volume of the sphere is " + volume;
-}
-
-alert(volumeOfASphere(7.2));
+//----------------------------------------------------------------------------------------------
+// The refactor challenge 
+// DRY -don't repeat yourself 
+// var html = '';
+// var red;
+// var green;
+// var blue;
+// var rgbColor;
+// var counter = 0;
+// while (counter < 10){
+// red = Math.floor(Math.random() * 256 );
+// green = Math.floor(Math.random() * 256 );
+// blue = Math.floor(Math.random() * 256 );
+// rgbColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
+// html += '<div style="background-color:' + rgbColor + '"></div>';
+// counter += 1;
+// }
+// document.write(html);
+// the refactor challenge solution vid - could have used a for loop
 },{}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -294,7 +257,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58265" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57132" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
@@ -436,5 +399,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},["../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","scripts-four.js"], null)
-//# sourceMappingURL=/scripts-four.b5882a65.map
+},{}]},{},["../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js-loops-arrays-obects/scripts.js"], null)
+//# sourceMappingURL=/scripts.e87fdb0d.map
