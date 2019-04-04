@@ -104,198 +104,153 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   // Override the current require with this new one
   return newRequire;
-})({"js-loops-arrays-obects/scripts.js":[function(require,module,exports) {
-// Introducing loops, arrays and objects vid
-//What are loops vid
-// function randomNumber(upper){
-//     return Math.floor(Math.random()* upper) +1;
+})({"js-loops-arrays-obects/scripts-part-two.js":[function(require,module,exports) {
+// What is an array
+//variable is a like a box that can only carry one item, array can carry many items at a time
+//more flexible method of storing info 
+// var arrayName = [
+//     'random',
+//     23,
+//     true,
+//     'etc'
+// ];
+// var scores = [10,20,30,40,50];
+// var shoppingList = [
+//     'banana',
+//     'chocolate',
+//     'washing liquid'
+// ];
+//--------------------------------------------------------------------------------------------------------------------------
+// Accessing items in an array 
+// var scores = [1,2,3];
+// alert(scores[1]);
+// var shopping = ['banana', 'chocolate', 'something else'];
+// alert(shopping[0]);
+//--------------------------------------------------------------------------------------------------------------------------
+// adding data to arrays
+// var numbers = [1,2,3,4,5,6,2,4,5];
+// numbers[numbers.length]= 10; // this will add 10 to the end of the array 
+// alert(numbers);
+// // the push method can also add things to an array 
+// numbers.push(11);
+// // can also add more than one 
+// numbers.push(11,12,12,12,12);
+// alert(numbers);
+// // the unshift method adds numbers to the beginning of the array 
+// numbers.unshift(1,1);
+// alert(numbers);
+// var playList = []; // array literal, empty array 
+// platList.push('random song');
+// console.log(playList);
+//--------------------------------------------------------------------------------------------------------------------------
+// removing items from arrays
+//pop and shift - pop removes the last  
+// var numbers = [1,2,3,4,5,6];
+// numbers.pop(); // this takes off the last item from the array 
+// alert(numbers);
+// // this can also be put ito a variable 
+// var newNumber = numbers.pop();
+// alert(newNumber); // 5
+//shift method removes the first item from the array 
+// var numbers = [12,12,12,1,1,2,4,34,3];
+// alert(numbers.shift());
+// var nums = [1,2,3,4,5];
+// nums.length; //5
+// nums.push(6); // 6 items in the array 
+//--------------------------------------------------------------------------------------------------------------------------
+// Using for loops with arrays 
+// var students = ['ben', 'other', 'jerry', 'paul']; // array is created with 3 items 
+// for (var i=0; i <students.length; i += 1){ // var i created and 0 stored. Condition tested, then variable is added to 
+//     console.log(students[i]); }
+//students.length means that the loop will execute for the amount of items in the array 
+// e.g: array of quiz questions, ask one question after another 
+// array created with 4 items 
+// then the for loop 
+// i counter used to count the iterations through the loop
+// .length method used as a condition 
+// counter added to each iteration 
+// as soon as the counter hits the number of items in the array 
+// the console will stop logging student names 
+// var playList = [
+//     'i did it my way',
+//     'respect',
+//     'imagine',
+//     'born to run'
+// ];
+// // array with song names 
+// function print(message){
+//     document.write(message);
+// //function to print songs to the html
+// // function to print the html 
+// function printList(list){
+//     var listHtml = '<ol>';
+//     for(var i = 0; i < list.length; i += 1){ 
+//         listHtml += '<li>' + list[i] + '</li>';
+//     }
+//     listHtml += '</ol>';
+//     print(listHtml); // previous function called, passed the '<ol>'
 // }
-// var counter = 0;
-// while (counter < 10000) {  //test condition 
-//     var randNum = randomNumber(6);
-//     document.write(randNum + ' ');
-//     counter += 1;
+// printList(playList); // passing the array in the function 
+//array created 
+//html printed 
+//array printed 
+//--------------------------------------------------------------------------------------------------------------------------
+// useful array methods 
+// join method 
+// var daysInAWeek = [
+//     'monday',
+//     'tues',
+//     'wed',
+//     'thurs',
+//     'fri'
+// ];
+// var daysString = daysInAWeek.join(', ');
+// alert(daysInAWeek);
+// alert(daysString);
+// the join method passes any character to the array, you can also pass more than one characteer
+// concat method - can be used to add one list to another
+// var students = [
+//     'henry',
+//     'harry',
+//     'ron'
+// ];
+// var newStudents = [
+//     'joan',
+//     'john',
+//     'random'
+// ];
+// var allstudents = students.concat(newStudents);
+// alert(allstudents);
+// this will add the 2nd array to the first 
+//indexOf method 
+// var fruit = [
+//     'apple',
+//     'orange',
+//     'bananas'
+// ];
+// var position = fruit.indexOf('apple');
+// alert(position);
+// var inStock = [ 'apples', 'eggs', 'milk', 'cookies', 'cheese', 'bread', 'lettuce', 'carrot', 'broccoli', 'pizza', 'potato', 'crackers', 'onion', 'tofu', 'frozen dinner', 'cucumber'];
+// var search;
+// function print(message) {
+//   document.write( '<p>' + message + '</p>');
 // }
-//----------------------------------------------------------------------------------------------
-// A closer look at loop conditions 
-// var counter = 0;
-// while (counter < 100){
-//     console.log(counter);
-//     counter +=1;
-// }
-// var upper = 10000;
-// var randomNumber = getRandomNumber(upper);
-// var guess;
-// var attempts = 0;
-// function getRandomNumber(upper){
-//     return Math.floor(Math.random() * upper) + 1;
-// }
-// while (guess !== randomNumber){
-//     guess = getRandomNumber(upper);
-//     attempts += 1;
-//     console.log("The random number is " + randomNumber + ", and the guess was " + guess);
-//     if (guess == randomNumber){
-//         alert("It took " + attempts + " attempts for the computer to guess the number!");
+// while(true){
+//     search = prompt("Search for a product in the store, type 'list' to list all of the items in the store and 'quit' to quit the program");
+//     if (search === 'quit'){
+//         break;
+//     } else if (search === 'list'){
+//         print(inStock.join(', '))
+//     } else {
+//         if (inStock.indexOf(search)){
+//             print('yes we have ' + message)
+//         } else {
+//             print (message + ' is not in stock');
+//         }
 //     }
 // }
-// if the test condition is true at the beginning the loop won't run 
-// break condition allows you to exit the loop 
-//----------------------------------------------------------------------------------------------
-// do while loops 
-// do {
-// } while ()
-// do it over and over again as long as the condition is true 
-// difference between this and while loop - always executes the code block at least once, because the condition is tested after the loop
-// while loop: condition tested at beginning
-// do while: condition tested at the end 
-// var randomNumber = getRandomNumber(10);
-// var guess;
-// var guessCount = 0;
-// var correctGuess = false; 
-// function getRandomNumber(upper){
-//     var num = Math.floor(Math.random()* upper) + 1;
-//     return num;
-// }
-// do {
-//     guess= prompt("i'm thinking of a number between 1 and 10");
-//     guessCount += 1;
-//     if (parseInt(guess) === randomNumber) {
-//     correctGuess = true;
-// }
-// } while (! correctGuess)  // not operator 
-//     alert("you got it!");
-//----------------------------------------------------------------------------------------------
-// For loops 
-// used for actions that need to run a particular number of times
-// commonly used with arrays 
-// var counter = 0;
-// while (counter < 10){
-//     document.write(counter);
-//     counter += 1;
-// }
-// // This is the same as 
-// for (var counter = 0; counter < 10; counter +=1){
-//     document.write(counter);
-// }
-// declare the variable, condition, result 
-// for (var i = 11; i < 500; i += 2){
-//     console.log(i);
-// }
-// fast way to write loops 
-// var html = ''; 
-// for (var i = 1; i <= 10; i += 1){
-//     html += i + i;
-// }
-// console.log(html);
-//----------------------------------------------------------------------------------------------
-// Exiting loops - break statement 
-// var randomNumber = getRandomNumber(10);
-// var guess;
-// var guessCount = 0;
-// var correctGuess = false;
-// function getRandomNumber( upper ) {
-//   var num = Math.floor(Math.random() * upper) + 1; 
-//   return num;
-// }
-// while(guessCount < 10){
-//   guess = prompt('I am thinking of a number between 1 and 10. What is it?');
-//   guessCount += 1;
-//   if (parseInt(guess) === randomNumber) {
-//     correctGuess = true;
-//     break; // stops an infinite loop 
-//   }  
-// }
-// if (correctGuess){ 
-// document.write('<h1>You guessed the number!</h1>');
-// document.write('It took you ' + guessCount + ' tries to guess the number ' + randomNumber);
-// } else {
-//     document.write("you suck");
-// }
-//----------------------------------------------------------------------------------------------
-// The refactor challenge 
-// DRY -don't repeat yourself 
-// var html = '';
-// var red;
-// var green;
-// var blue;
-// var rgbColor;
-// var counter = 0;
-// while (counter < 10){
-// red = Math.floor(Math.random() * 256 );
-// green = Math.floor(Math.random() * 256 );
-// blue = Math.floor(Math.random() * 256 );
-// rgbColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
-// html += '<div style="background-color:' + rgbColor + '"></div>';
-// counter += 1;
-// }
-// document.write(html);
-// the refactor challenge solution vid - could have used a for loop 
-// var html = '';
-// var red;
-// var green;
-// var blue;
-// var rgbColor;
-// var counter = 0;
-// var colors = red + blue + green;
-// function color (){
-//     colors = Math.floor(Math.random()*256);
-//     return colors;
-// }
-// while (counter < 10){
-// rgbColor = 'rgb(colors)';
-// html += '<div style="background-color:' + rgbColor + '"></div>';
-// counter += 1;
-// }
-// document.write(html);
-//----------------------------------------------------------------------------------------------
-// practice js loops - for, while, do while
-// for practice 
-// var text;
-// for (var text = 0; text < 5; text += 1){
-//     console.log("The first loop: " + text);
-// }
-// for (var i = 1; i < 6; i += 1){
-//     console.log("The second loop " + i);
-// }
-// for(var j = 6; k=j >= 1; j -=1){
-//     console.log("The third loop " + j);
-// }
-// for (var h = 5; h <= 50; h += 5){
-//     console.log("The fourth loop is " + h);
-// }
-// for (var b= 50; b >= 0; b -= 5){
-//     console.log("The fifth loop is " + b);
-// }
-// while practice
-var i = 0;
-var b = 1;
-var c = 5;
-var d = 5;
-var z = Math.floor(Math.random() * 9) + 1;
-
-while (i <= 4) {
-  console.log("1st loop: " + i);
-  i += 1;
-}
-
-while (b <= 5) {
-  console.log("2nd loop: " + b);
-  b += 1;
-}
-
-while (c >= 0) {
-  console.log("3rd loop: " + c);
-  c -= 1;
-}
-
-while (d <= 50) {
-  console.log("fifth loop: " + d);
-  d += 5;
-}
-
-while (z !== 8) {
-  console.log(z);
-}
+//--------------------------------------------------------------------------------------------------------------------------
+// Two-Dimensional arrays
 },{}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -323,7 +278,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59025" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62952" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
@@ -465,5 +420,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},["../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js-loops-arrays-obects/scripts.js"], null)
-//# sourceMappingURL=/scripts.e87fdb0d.map
+},{}]},{},["../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js-loops-arrays-obects/scripts-part-two.js"], null)
+//# sourceMappingURL=/scripts-part-two.6040f3d6.map

@@ -175,3 +175,82 @@
 // document.write(html);
 
 // the refactor challenge solution vid - could have used a for loop 
+
+// var html = '';
+// var red;
+// var green;
+// var blue;
+// var rgbColor;
+// var counter = 0;
+// var colors = red + blue + green;
+
+// function color (){
+//     colors = Math.floor(Math.random()*256);
+//     return colors;
+// }
+// while (counter < 10){
+// rgbColor = 'rgb(colors)';
+// html += '<div style="background-color:' + rgbColor + '"></div>';
+// counter += 1;
+// }
+
+// document.write(html);
+
+//----------------------------------------------------------------------------------------------
+
+// practice js loops - for, while, do while
+
+// for practice 
+// var text;
+
+// for (var text = 0; text < 5; text += 1){
+//     console.log("The first loop: " + text);
+// }
+
+// for (var i = 1; i < 6; i += 1){
+//     console.log("The second loop " + i);
+// }
+
+// for(var j = 6; k=j >= 1; j -=1){
+//     console.log("The third loop " + j);
+// }
+
+// for (var h = 5; h <= 50; h += 5){
+//     console.log("The fourth loop is " + h);
+// }
+
+// for (var b= 50; b >= 0; b -= 5){
+//     console.log("The fifth loop is " + b);
+// }
+
+// while practice
+
+// var i = 0;
+// var b = 1;
+// var c = 5;
+// var d = 5;
+// var z = Math.floor(Math.random()*9)+1;
+
+// while (i <= 4){
+//     console.log("1st loop: " + i);
+//     i += 1;
+// }
+
+// while (b <= 5){
+//     console.log("2nd loop: " + b);
+//     b += 1;
+// }
+
+// while (c >= 0){
+//     console.log("3rd loop: "+ c);
+//     c -= 1;
+// }
+
+// while (d <= 50){
+//     console.log("fifth loop: " + d);
+//     d += 5;
+// }
+
+// while(z !== 8){
+//     console.log(z);
+// }
