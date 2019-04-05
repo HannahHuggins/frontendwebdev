@@ -1,3 +1,5 @@
+import { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } from "constants";
+
 // What is an array
 
 //variable is a like a box that can only carry one item, array can carry many items at a time
@@ -209,4 +211,110 @@
 
 //--------------------------------------------------------------------------------------------------------------------------
 
-// Two-Dimensional arrays 
+// Two-Dimensional arrays - arrays within an array, list containing other lists 
+
+// var grades = [
+//     [80, 90, 100 ,95],
+//     [75, 95, 85, 100],
+//     [60, 70, 77, 90]
+// ];
+
+// grades[0]; //the first array
+// grades[1];
+// grades[2];
+
+// alert(grades[0][0]);
+
+// var playList = [
+//     ['I did it my way', 'Frank Sinatra'],
+//     ['Respect', 'Aretha Franklin'],
+//     ['Imagine', 'john lennon'],
+//     ['born to run', 'bruce springsteen'],
+//     ['louie louie', 'the kingsmen'],
+//     ['maybellene', 'chuck berry']
+
+// ];
+
+// 2 dimensional array - array within an array 
+//elements within the array 
+
+// function print(message){
+//     document.write(message);
+// }
+// //function to write it to the html
+
+// function printSongs(songs){ // songs is the parameter
+//     var listHTML = '<ol>';
+//     for (var i =0; i <songs.length; i += 1){
+//         listHTML += '<li>' + songs[i][0] + ' by ' + songs[i][1] + '</li>';
+//     }
+//     listHTML += '</ol>';
+//     print(listHTML);
+// }
+
+// printSongs(playList);
+// good to have function names accurately represent what you want to do 
+
+//--------------------------------------------------------------------------------------------------------------------------
+
+// Build a quiz challenge part 1
+
+// ask questions and evaluate each answer
+//keep track of the correct answers
+// afterward number right and number wrong 
+
+// two dimensional array to hold the questions and answers 
+//each elements is 1 question 
+// 3 questions 
+
+//loop to cycle through each question, ask it and compare the response from the player 
+//prompt method to ask the player 
+//conditional statement to see if the players answer matches the real answer 
+
+
+// var questions = [
+//     ['What is my name?', 'Hannah'],
+//     ['randomquestion', 'two'],
+//     ['otherrandom', 'heyo']
+// ];
+
+// var counter;
+
+// function askQuestions (){
+//     counter = 0;
+//     var answer = prompt(questions[0][0]);
+//     if (answer === questions[0][1]){
+//         alert("Correct!")
+//         counter += 1;
+//     } else {
+//         alert("Wrong!")
+//     }
+//     var answerTwo = prompt(questions[1][0]);
+//     if (answerTwo == questions[1][1]){
+//         alert("Correct")
+//         counter += 1;
+//     } else {
+//         alert("Wrong!")
+//     }
+//     var answerThree = prompt(questions[2][0]);
+//     if (answerThree === questions[2][1]){
+//         alert("Correct!");
+//         counter += 1;
+//     } else {
+//         alert("wrong")
+//     } 
+//     alert('Congrats! You got ' + counter + ' correct!');
+// }
+
+
+// askQuestions();
+
+// Build a quiz challenge part 2 
+
+
+//Build a Quiz Challenge, Part 2 Solution
+
+
+//arrays are data structures
+
+//objects
