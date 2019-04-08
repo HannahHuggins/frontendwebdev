@@ -183,16 +183,78 @@
 // create a data structure to hold info about students 
 
 
-var students = [
-    {name: 'dave', track: 'javaScript', achievements: 'js', points:50},
-    {name: 'henry', track: 'java', achievements: 'j', point: 100},
-    {name: 'hannah', track: 'javaScript', achievements: 'js', points: 200},
-    {name: 'dave', track: 'javascript', achievements: 'js', points: 500},
-    {name: 'jo', track: 'css', achievements: 'c', points: 1000}
-];
+// var students = [
+//     {name: 'dave', track: 'javaScript', achievements: 'js', points:50},
+//     {name: 'henry', track: 'java', achievements: 'j', point: 100},
+//     {name: 'hannah', track: 'javaScript', achievements: 'js', points: 200},
+//     {name: 'dave', track: 'javascript', achievements: 'js', points: 500},
+//     {name: 'jo', track: 'css', achievements: 'c', points: 1000}
+// ];
 
-for (var prop in students){
-    console.log(students[prop])
-};
+// for (var prop in students){
+//     document.write("name: " + students[prop].name + ", track: " + 
+//     students[prop].track + ", achievements: " + students[prop].achievements
+//     + ", points: " + students[prop].points)
+// }
 
 // the build an object challenge, part 1 solution 
+// build an object challenge part 2 
+// the build an object challenge, part 2 solution 
+
+// the student record search challenge 
+
+// make the records searchable 
+// prompt method to request the name of a student 
+
+
+// var students = [
+//     {name: 'dave', track: 'javaScript', achievements: 'js', points:50},
+//     {name: 'henry', track: 'java', achievements: 'j', point: 100},
+//     {name: 'hannah', track: 'javaScript', achievements: 'js', points: 200},
+//     {name: 'dave', track: 'javascript', achievements: 'js', points: 500},
+//     {name: 'jo', track: 'css', achievements: 'c', points: 1000}
+// ];
+
+// for (var prop in students){
+//     document.write("name: " + students[prop].name + ", track: " + 
+//     students[prop].track + ", achievements: " + students[prop].achievements
+//     + ", points: " + students[prop].points)
+// }
+
+// function searchStudents(){
+//     studentName = prompt("what is the students name?");
+//         if (studentName === 'dave'){
+//             alert("student name: " + students[0].name + ", track: " +  
+//             students[0].track + ", achievements: " + students[0].achievements
+//             + ", points: " + students[0].achievements);
+//         } else if (studentName === 'henry'){
+//             alert("Student name: " + students[1].name + ", track: " + 
+//             students[1].track + ", achievements: " + students[1].achievements
+//             + ", points:" + students[1].points)
+//         } else if (studentName === 'hannah'){
+//             alert("Student name: " + students[2].name + ", achievements: " + students[2].achievements
+//             + ", track: " + students[2].track + ", points: " + students[2].points)
+
+//         }
+//     }
+
+
+// searchStudents();
+
+// the sudent record search challenge solution
+
+// ---------------------------------------------------------------------
+
+// practice object literals in javascript 
+
+// introducing the practice vid 
+
+// var book = [
+//     {title: 'harry potter', author: 'jk', year: 1993},
+// ];
+
+// for (prop in book){
+//     console.log(book[prop]);
+// }
+
+
