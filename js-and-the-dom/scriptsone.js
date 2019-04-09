@@ -1,3 +1,5 @@
+import { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } from "constants";
+
 //welcome and overview vid
 
 // Thinking globally vid 
@@ -58,3 +60,93 @@
 //Selecting elements with the same class name 
 
 // using document.getElementsByClassName() 
+
+// const myList = document.getElementsByTagName('li');
+
+// for(let i =0; i < myList; i += 1){
+//     myList[i].style.color = 'purple';
+// }
+
+// const errorNotPurple = document.getElementsByClassName('error-not-purple');
+
+// for(let i = 0; i < errorNotPurple.length; i += 1){
+//     myList[i].style.color = 'red';
+// }
+
+//---------------------------------------------------------------------------
+// Using CSS queries to select page elements 
+
+// document.querySelector()
+//document.querySelectorAll()
+
+// document.querySelectorAll('li'); - returns all elements that match the selector
+// document.querySelector('li') - returns the first one that matches 
+
+//how to select by type = 
+// id =  #   document.querySelectorAll('#myHeading');
+// class = .    document.querySelectorAll('.error-not-purple');
+// html attribute = []  document.querySelector('[title=random]');
+
+// css psuedo class selector nth - zebra stripe the list
+
+// const evens = document.querySelectorAll('li:nth-child(even)');
+
+// for(let i = 0; i < evens.length; i += 1){
+//     evens[i].style.backgroundColor = 'lightgray';
+// }
+
+
+//css pesudo classes 
+
+//every other list item has a light gray background 
+//---------------------------------------------------------------------------
+
+// practice selecting DOM elements 
+
+//---------------------------------------------------------------------------
+
+// getting and setting text with textContent and innerHTML 
+
+// textContent method - use this to read or set text values of elements 
+
+// innerHTML method - can read and alter elements on a webpage 
+
+
+// const input = document.querySelector('input');
+// const p = document.querySelector('p.description');
+// const button = document.querySelector('button');
+
+// button.addEventListener('click', () => {
+//     p.textContent = input.value + ':';
+// });
+
+
+// const input = document.querySelector('input');
+// const p = document.querySelector('p.description');
+// const button = document.querySelector('button');
+
+// button.addEventListener('click', () => {
+//     p.innerHTML = input.value + ':';
+// });
+
+//---------------------------------------------------------------------------
+
+//changing element atributes 
+
+// element.attribute 
+
+// const input = document.querySelector('input');
+//input.type   - //text \
+
+
+// const input = document.querySelector('input');
+// const p = document.querySelector('p.description');
+// const button = document.querySelector('button');
+// button.addEventListener('click', () => {
+//     p.innerHTML = input.value + ':';
+// });
+
+
+
+// title attribute has been set 
+//---------------------------------------------------------------------------
