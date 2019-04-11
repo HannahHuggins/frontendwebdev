@@ -1,4 +1,3 @@
-import { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } from "constants";
 
 //welcome and overview vid
 
@@ -138,15 +137,123 @@ import { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } from "constants";
 // const input = document.querySelector('input');
 //input.type   - //text \
 
+// const toggleList = document.getElementById("toggle-list");
+// const listDiv = document.querySelector('.list');
+// const descriptionInput = document.querySelector('input.description');
+// const descriptionP = document.querySelector('p.description');
+// const descriptionButton = document.querySelector('button.description');
+// const addItemInput = document.querySelector('input.addItemInput');
+// const addItemButton = document.querySelector('button.addItemButton');
+// const removeItemButton = document.querySelector('button.removeItemButton');
 
-// const input = document.querySelector('input');
-// const p = document.querySelector('p.description');
-// const button = document.querySelector('button');
-// button.addEventListener('click', () => {
-//     p.innerHTML = input.value + ':';
+// toggleList.addEventListener('click', () => {
+//     if (listDiv.style.display == 'none') {
+//         toggleList.textContent = 'Hide list';
+//         listDiv.style.display = 'block';
+//     } else {
+//         toggleList.textContent = 'Show list';
+//         listDiv.style.display = 'none';
+//     }
+// });
+
+
+// descriptionButton.addEventListener('click', () => {
+//     descriptionP.innerHTML = descriptionInput.value + ':';
+//     descriptionInput.value = '';
+// });
+
+// addItemButton.addEventListener('click', () => {
+//     let ul = document.getElementsByTagName('ul')[0];
+//     let li = document.createElement('li');
+//     li.textContent = addItemInput.value;
+//     ul.appendChild(li);
+//     addItemInput.value = '';
+// });
+
+// removeItemButton.addEventListener('click', () => {
+//     let ul = document.getElementsByTagName('ul')[0];
+//     let li = document.querySelector('li:last-child');
+//     ul.removeChild('li');
 // });
 
 
 
 // title attribute has been set 
 //---------------------------------------------------------------------------
+
+// Creating new DOM elements 
+
+// how to insert content into the DOM - appending nodes vid .appendChild() method 
+
+// nodes belong to the dom, elements - HTML 
+
+// eg <ul> parent, <li> child 
+
+//-------------------------
+
+//Removing nodes vid 
+
+//removing elements from the page  e.g - when a user wants to delete a note/photo 
+
+// .removeChild() method takes the arguement of the elemenet you want to remove 
+
+//-------------------------
+
+// practice 
+//what is an event 
+
+//something you do on the webpage, clicking, scrolling, moving through the page 
+
+//when you interact with the page you may trigger events 
+
+// function as parameters vid 
+
+// function say(something){
+//     console.log(something);
+// }
+
+// function exec(func, arg){
+//     func(arg);
+//}
+//2 parameters ar very different data types, one is a function and the other is a string, but both can be passed as arguements 
+
+// exec(say, "hi there!");
+
+//passing a function into a function 
+
+
+
+// we can oass a function directly into another function 
+
+// function exec(func, arg){
+//     func(arg);
+// }
+
+// exec((something) => {
+//     console.log(something);
+// }, 'great'); //anonymous function 
+
+//-------------------------
+
+// Delaying execution with setTimeout();
+
+// window.setTimeout((something) => {
+//     console.log(something);
+// }, 3000, 'greetings, everyone!');
+
+//method expects a function to be the first parameter 
+
+//-------------------------
+
+// listening for events with addEventListener();
+//making a site interactive:
+// selecting elements on a page
+// manipulating elements 
+//listening for user actions 
+
+//the event target can be an element, a document or window object. 
+
+
+
+// event type, callback function (event handler) 
+
